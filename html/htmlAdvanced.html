@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML ADVANCED</title>
+  </head>
+  <body>
+<p>Table generation in html.</p>
+<p>The table tag is used for table generation. the th tag is used for
+column names as they will be the headers. Inside the tag we use border for creating
+a border to the table</p>
+<p>tr tag is used for table rows and td tag is used for table cells.</p>
+<table border="1">
+  <thead>
+    <th>Number</th>
+    <th>color</th>
+    <th>country</th>
+  </thead
+  <tr>
+    <td>250</td>
+    <td>Red</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Blue</td>
+  </tr>
+</table>
+<p>input tag is used to take information from the user accessing the website.
+</p>
+<p>Here we are creating a small form as example.</p>
+<form>
+  <h1>Login</h1>
+  <h2>Please input your email and password</h2>
+  <p>Here we will be us the form tag to take the input</p
+    <p>inside the input tag, type: refers to the form of input we want</p>
+    <p>name: name we give to the input so we can call them later on in other files.</p>
+    <p>value: default value we place inside the input box</p>
+  <input type="email" name="useremail" value="abc@gmail.com">
+  <input type="password" name="password" value="xyz">
+  <input type="submit" name="" value="Click Me!">
+  <p>when we specify the type as password, it usually comes with hidden characters when typing.</p>
+  <p>Type submit is used for submitting the form</p>
+  <p>Type color lets you pick a color</p>
+  <form>
+    <h2>Choose and color by clicking</h2>
+    <input type="color" name="" value="">
+  </form>
+  <p>Text input is used for giving text.</p>
+  <input type="text" name="" value="Give text here!">
+</form>
+<p>Creating an action when clicking the submit button.</p>
+<p>We are giving the action in form tag a webink so that it can be directed. and the method will be get as we are taking the information from the user through input.</p>
+<form action="https://www.facebook.com" method="get">
+  <input type="text" name="username" value="">
+  <input type="submit" name="" value="Submit">
+</form>
+<form>
+  <p>We can use labels to create ids for input tags. We pass the id that we are going to give the input in the for of the label tag.</p>
+  <p>id is used for uniquely identifying HTML tags.</p
+    <p>We can also use a placeholder instead of a value to make it less concrete.</p>
+<p>required is used to make sure that the input field is filled out.</p>
+  <label for="userinput">Enter input:</label>
+  <input  id="userinput" type="text" name="" placeholder="Enter input" required>
+  <input type="submit" name="" value="submit">
+</form>
+
+<p>Trying different types of forms, buttons and selections</p>
+
+
+<form method="get">
+  <p>radio button is used to fill only once. you click once more you cant unclick it.</p>
+<p>We use label to id the radio button.</p>
+<h3>Are you a resident of europe?</h3>
+<label for="ineu">From eu</label>
+  <input id="ineu" type="radio" name="loc" value="from eu">
+  <label for="noteu">Not from eu</label>
+  <input id="noteu" type="radio" name="loc" value="outside eu">
+  <p>When the radio buttons share the same name we can choose from one of the radio buttons and the others become unhighlighted</p>
+<p>We give the value to the radio buttons so that the values is taken as get.</p>
+<h3>How was your visit?</h3>
+<p>Select tag is used for a dropdown box.</p>
+<select name="stars">
+  <option value="Very Good">3</option>
+    <option value="Good">2</option>
+  <option value="Bad">1</option>
+    <input type="submit" name="" value="submit here">
+</select>
+<p>We use the textarea tag to give more space for writing rather than a single line. It aslo has option of number of rows and columns to make it as big and as small as needed.</p>
+<textarea name="mytext" rows="8" cols="80"></textarea>
+</form>
+  </body>
+</html>
