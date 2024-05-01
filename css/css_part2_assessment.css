@@ -6,7 +6,7 @@ h1{
 }
 
 .art{
-  margin: auto;
+  margin: auto; /*it is the outside of the table so that it aligns in the center.*/
 }
 
 td{
