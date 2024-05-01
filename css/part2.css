@@ -1,0 +1,23 @@
+body{
+  background: url(https://tse1.mm.bing.net/th?id=OIP.Ov2d9I7OYvEqOcdv4WOIdgHaE8&pid=Api&P=0&h=220);
+  /* we can even put an image by calling the url() for the background. */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div{
+  background-color: yellow;
+  border-color: blue;
+  /* we need to specify width and style, otherwise css cannot say how thick of a border to take. */
+  border-width: 10px;
+  border-style: dotted;
+}
+
+span{
+  background-color: orange;
+  color: blue;
+}
+
+p{
+  color: black;
+}
