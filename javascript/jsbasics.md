@@ -42,7 +42,7 @@ Connecting JS to HTML file.
 under the title tag use and provide the name of the script.
 <script src = "myscript.js"></script>
 
-**Operators:
+##Operators:
 >, <, >=, >=, == (works even for strings),
 js takes "2" == 2 (string equals number as true), hence we need to add one more =. "2" === 2 will be false.
 It is same for != as well. So !== should be used instead.
@@ -51,12 +51,12 @@ true === 1 is false. Similar for 0 and false.
 null == undefined is true. so use ===.
 NaN == NaN is false.
 
-**Logical Operators:
+##Logical Operators:
 And operator -> &&
 OR operator -> ||
 NOT -> !
 
-**Control Flow:
+##Control Flow:
 
 if (condition)
 {//execute
@@ -68,8 +68,19 @@ else {
 //execute
 }
 
-**While Loop:
+##While Loop:
 while (condition)
 {
 //execute code.
+}
+
+##For Loop:
+JS has three types of for loops:
+1. For
+2. For/In
+3. For/Out
+
+for(statement1;statement2;statement3)
+{
+//execute code
 }
