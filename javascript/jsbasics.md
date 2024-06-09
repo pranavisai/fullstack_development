@@ -41,3 +41,35 @@ This will take the input and store it in the variable age.
 Connecting JS to HTML file.
 under the title tag use and provide the name of the script.
 <script src = "myscript.js"></script>
+
+**Operators:
+>, <, >=, >=, == (works even for strings),
+js takes "2" == 2 (string equals number as true), hence we need to add one more =. "2" === 2 will be false.
+It is same for != as well. So !== should be used instead.
+true == 1 is true.
+true === 1 is false. Similar for 0 and false.
+null == undefined is true. so use ===.
+NaN == NaN is false.
+
+**Logical Operators:
+And operator -> &&
+OR operator -> ||
+NOT -> !
+
+**Control Flow:
+
+if (condition)
+{//execute
+}
+else if {
+//execute
+}
+else {
+//execute
+}
+
+**While Loop:
+while (condition)
+{
+//execute code.
+}
