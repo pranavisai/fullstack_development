@@ -84,3 +84,36 @@ for(statement1;statement2;statement3)
 {
 //execute code
 }
+
+##Functions:
+function name(parameter 1, parameter 2){
+//execute code
+}
+when calling the function if you do not give any parameters then it will take the parameters as undefined.
+
+function name(parameter 1 = "Joe"){
+//execute code
+}
+This will assign Joe as default if no value is given as input.
+
+function name(parameter 1, parameter 2){
+//execute code
+return;
+}
+This will be a local scope of the function.
+
+To have global scope:
+var v = "Joe";
+var name = "Bin"
+function fun(name){
+console.log(v);
+var name = "Pillar";
+console.log(name);
+}
+fun();
+
+Here first it will check in local if v value is available and if not then it will check for the global scope and give the output as Joe and Pillar. 
+
+when given the command console.log(name); outside the function. The output will be Joe Pillar Bin as the name is taken from the global value.
+
+##arrays
