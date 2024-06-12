@@ -30,7 +30,7 @@ Javascript uses camel case (bankAccount for example.)
 setting a variable:
 var bankAccount = 100;
 same if also want to initialize strings.
-if a variable is named but it has no value. It goes to undefined.
+if a variable is named but it has no value. It goes undefined.
 
 prompt()-> is used to ask for input.
 console.log() -> is for showing output in the console.
@@ -45,7 +45,7 @@ under the title tag use and provide the name of the script.
 ##Operators:
 >, <, >=, >=, == (works even for strings),
 js takes "2" == 2 (string equals number as true), hence we need to add one more =. "2" === 2 will be false.
-It is same for != as well. So !== should be used instead.
+It is the same for != as well. So !== should be used instead.
 true == 1 is true.
 true === 1 is false. Similar for 0 and false.
 null == undefined is true. so use ===.
@@ -112,8 +112,47 @@ console.log(name);
 }
 fun();
 
-Here first it will check in local if v value is available and if not then it will check for the global scope and give the output as Joe and Pillar. 
+Here first it will check locally if the v value is available and if not then it will check for the global scope and give the output as Joe and Pillar. 
 
 when given the command console.log(name); outside the function. The output will be Joe Pillar Bin as the name is taken from the global value.
 
 ##arrays
+syntax: var array = [1, 2, 3]
+The array index starts from 0.
+we can change the value by doing: array[2]= 4. This will change the value of 3 to 4.
+An array is mutable -> That means that we give an index and reassign.
+JS array can take mixed data types.
+Push and pop methods are used to add and remove elements from array.
+example:
+var number = array.pop(). This will give out 3 and we will only have the array as [1,2]
+array.push(4) will add item to array and we will have the answer as [1,2,4].
+we can have nested arrays like [[1,2,3], [4,5,6]].
+we can have for loop the normal way to iterate or we can use this way:
+for (number of array){
+console.log(number);
+}
+This will give the output as:
+1
+2
+4
+
+if you want to give each element of the array as an alert on the website. Then the code is 
+for (number of array){
+alert(number);
+}
+The below code is exactly similar to the above one:
+arr.forEach(alert);
+
+We can use this in this way as well:
+We have a function as 
+saySomething(name){
+console.log(name+ " is awesome!");
+}
+var topics= ["python", "django", "science"]
+topics.forEach(saySomething)
+
+then the answer will be:
+python is awesome
+django is awesome
+science is awesome
+
