@@ -42,7 +42,7 @@ Connecting JS to HTML file.
 under the title tag use and provide the name of the script.
 <script src = "myscript.js"></script>
 
-##Operators:
+## Operators:
 >, <, >=, >=, == (works even for strings),
 js takes "2" == 2 (string equals number as true), hence we need to add one more =. "2" === 2 will be false.
 It is the same for != as well. So !== should be used instead.
@@ -51,12 +51,12 @@ true === 1 is false. Similar for 0 and false.
 null == undefined is true. so use ===.
 NaN == NaN is false.
 
-##Logical Operators:
+## Logical Operators:
 And operator -> &&
 OR operator -> ||
 NOT -> !
 
-##Control Flow:
+## Control Flow:
 
 if (condition)
 {//execute
@@ -68,13 +68,13 @@ else {
 //execute
 }
 
-##While Loop:
+## While Loop:
 while (condition)
 {
 //execute code.
 }
 
-##For Loop:
+## For Loop:
 JS has three types of for loops:
 1. For
 2. For/In
@@ -85,7 +85,7 @@ for(statement1;statement2;statement3)
 //execute code
 }
 
-##Functions:
+## Functions:
 function name(parameter 1, parameter 2){
 //execute code
 }
@@ -116,7 +116,7 @@ Here first it will check locally if the v value is available and if not then it 
 
 when given the command console.log(name); outside the function. The output will be Joe Pillar Bin as the name is taken from the global value.
 
-##arrays
+## arrays
 syntax: var array = [1, 2, 3]
 The array index starts from 0.
 we can change the value by doing: array[2]= 4. This will change the value of 3 to 4.
@@ -156,7 +156,7 @@ python is awesome
 django is awesome
 science is awesome
 
-##JS Objects
+## JS Objects
 The objects in JS are hash tables. Store information in key-value pairs.
 The JS object will not retain any sort of order like the JS array.
 It can take mixed datatypes.
@@ -174,7 +174,7 @@ To see the complete object (which sometimes might not be visible)
 give the command: console.log(object)
 to get the whole object along with key and value pairs in the console.
 
-###Iteration through object:
+### Iteration through object:
 use for-in loop.
 for (key in object){
 console.log(key);
@@ -183,7 +183,7 @@ will give output as key1, key2 ...
 for the values:
 also, add the code console.log(object[key]) within the loop.
 
-##Object Functions
+## Object Functions
 These are functions within objects.
 syntax:
 var object = {
