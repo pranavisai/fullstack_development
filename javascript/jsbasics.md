@@ -156,3 +156,42 @@ python is awesome
 django is awesome
 science is awesome
 
+##JS Objects
+The objects in JS are hash tables. Store information in key-value pairs.
+The JS object will not retain any sort of order like the JS array.
+It can take mixed datatypes.
+
+Syntax:
+object = {key1: "value one", key2: "value2", ...}
+Values can be accessed with the help of corresponding keys.
+To get the value: object["key1"]. This will give value one as the output
+It is also possible to give arrays and objects within the JS objects as key value pairs.
+
+To change a value 
+object["key1"] = "value1"
+
+To see the complete object (which sometimes might not be visible)
+give the command: console.log(object)
+to get the whole object along with key and value pairs in the console.
+
+###Iteration through object:
+use for-in loop.
+for (key in object){
+console.log(key);
+}
+will give output as key1, key2 ...
+for the values:
+also, add the code console.log(object[key]) within the loop.
+
+##Object Functions
+These are functions within objects.
+syntax:
+var object = {
+key1: function(){
+alert("This is the function within the object!")
+}}
+
+
+
+
+
