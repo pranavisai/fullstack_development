@@ -1,8 +1,8 @@
 Django is a free and open-source web framework.
 
-A Django project is a collection of applications and configurations that when combined together will make up the full web application.
+A Django project is a collection of applications and configurations that when combined will make up the full web application.
 
-It is important to use venv(virtual environment) as it allows you to have a virtual environment of Python and packages on a computer.
+It is important to use Venv (virtual environment) as it allows you to have a virtual environment of Python and packages on a computer.
 
 The virtual environment contains the newer version of the package. In Anaconda the virtual environment handler is included.
 
@@ -69,7 +69,7 @@ To run the project use: ```python manage.py runserver```
   path('yourappname/', include('yourappname.urls')),
   ...]
 ```
-This pattern is helping us find the pattern: www.domainname.com/yourappname/..
+This pattern is helping us find the pattern: www.domainname.com/yourappname/...
 3. When the pattern is matched the include() function tells Django to look at the urls.py file instead of the yourappname folder.
 
 ### Django templates:
@@ -91,13 +91,13 @@ def index(request):
     my_dict = {'insert_me': "Hello! I am from views.py!",}
     return render(request, 'index.html', my_dict) ```
 
-### static files
+### Static files
 
-1. First create a folder in the main directory named static. Then you can add css or images within the respective folder of this.
+1. First create a folder in the main directory named static. Then you can add CSS or images within the respective folder of this.
 2. After that in the settings.py folder create a directory for ```STATIC_DIR = BASE_DIR / "static"```.
 3. Make sure the ```"django.contrib.staticfiles",``` is present in the INSTALL_APPS array.
 4. In the same file, bottom there will be a ```STATIC_URL = "static/"```, if not create and add the STATIC_DIR as follows: ```STATICFILES_DIRS = [STATIC_DIR,]```.
-5. Example of how the tags should be added to the HTML page is as below. 
+5. An example of how the tags should be added to the HTML page is as below. 
 ```
 {% load static %}
 <!DOCTYPE html>
@@ -114,4 +114,50 @@ def index(request):
 </body>
 </html>
  ```
+
+### Models
+
+1. Models are used to incorporate a database into a Django Project.
+2. Django comes equipped with SQLite.
+3. In the settings.py file the ENGINE parameter can be edited for DATABASES.
+4. A class structure is used inside the relevant applications models.py file.
+5. ```django.db.models.Model``` is the built-in class used to make all the models subclasses of it.
+6. Each attribute represents a field of the class similar to column names with constraints in SQL.
+7. Example of a model class: 
+```
+class Webpage(models.Model):
+    topic = models.ForeignKey(Topic, models.DO_NOTHING)
+    name = models.CharField(max_length=264, unique=True)
+    url = models.URLField(unique=True)
+
+    def __str__(self):
+        return self.name
+```
+8. Django's ForeignKey requires an on_delete argument to specify the behavior when the referenced object is deleted. Some options are:
+   1. models.CASCADE: Deletes the object containing the ForeignKey when the referenced object is deleted.
+   2. models.PROTECT: Prevents deletion of the referenced object by raising a ProtectedError.
+   3. models.SET_NULL: Sets the ForeignKey to NULL when the referenced object is deleted (requires null=True on the field).
+   4. models.SET_DEFAULT: Sets the ForeignKey to its default value when the referenced object is deleted.
+   5. models.SET(): Sets the ForeignKey to the value passed to SET() when the referenced object is deleted.
+   6. models.DO_NOTHING: Does nothing when the referenced object is deleted.
+9. After models are set up the database migration is done.
+10. Database migration command: ```python manage.py migrate```
+11. To register the changes to the app: ```python manage.py makemigrations yourappname```
+12. Run the ```python manage.py migrate``` again.
+13. Open the Python shell to run and check the DB. Use command ```python manage.py shell```
+14. In the shell give the command: ```from yourappname.models import yourclassname```, to check once type: ```print(yourclassname.objects.all())```.
+15. Just to give, for instance, to give some values the format is ```t = Topic(top_name= "Social Network")```
+16. Then, ```t.save()```,to save and use the ```print(yourclassname.objects.all())```. This will give the changes made.
+17. To use the admin interface with the models we register them in the admin.py file.
+18. To register after import use the command: ```admin.site.register(class name)```.
+19. After setup, the admin interface can be used to interact with the DB.
+20. To fully use the DB and the Admin, we create a superuser using the command: ```python manage.py createsuperuser```. Provide a name, email, and password.
+
+### Population Scripts
+
+1. Useful to populate models with some "dummy" data.
+2. Install Faker Library with ```pip install Faker```
+3. Faker website: faker.readthedocs.io
+4. To populate with the fake data created. Command: ```python fakescriptname.py```
+5. The file script with the explanation is in the file Django/first_project/populate_first_app.py
 
