@@ -94,7 +94,7 @@ def index(request):
 ### Static files
 
 1. First create a folder in the main directory named static. Then you can add CSS or images within the respective folder of this.
-2. After that in the settings.py folder create a directory for ```STATIC_DIR = BASE_DIR / "static"```.
+2. In the settings.py folder create a directory for ```STATIC_DIR = BASE_DIR / "static"```.
 3. Make sure the ```"django.contrib.staticfiles",``` is present in the INSTALL_APPS array.
 4. In the same file, bottom there will be a ```STATIC_URL = "static/"```, if not create and add the STATIC_DIR as follows: ```STATICFILES_DIRS = [STATIC_DIR,]```.
 5. An example of how the tags should be added to the HTML page is as below. 
@@ -114,6 +114,7 @@ def index(request):
 </body>
 </html>
  ```
+6. Sometimes the CSS style sheet is cached and does not load the changes. In your browser use Ctrl + Shift + R to force reload without cache.
 
 ### Models
 
@@ -160,4 +161,3 @@ class Webpage(models.Model):
 3. Faker website: faker.readthedocs.io
 4. To populate with the fake data created. Command: ```python fakescriptname.py```
 5. The file script with the explanation is in the file Django/first_project/populate_first_app.py
-
