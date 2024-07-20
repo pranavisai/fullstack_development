@@ -161,3 +161,55 @@ class Webpage(models.Model):
 3. Faker website: faker.readthedocs.io
 4. To populate with the fake data created. Command: ```python fakescriptname.py```
 5. The file script with the explanation is in the file Django/first_project/populate_first_app.py
+
+
+### Django Forms
+
+1. Usage:
+   1. Quickly generate HTML form widgets.
+   2. Validate data and process it into a Python data structure.
+   3. Create form versions of our models and quickly update models from Forms.
+2. First we create a forms.py file inside the Django application.
+3. We then call Django's built-in forms classes.
+4. Important topics:
+   1. HTTP -> Hyper Text Transfer Protocol. They are designed to enable communication between a client and a server. The client submits a request and the server responds.
+   2. Commonly used methods for this are GET and POST.
+   3. GET -> Gets request data from a resource.
+   4. POST -> Submits data to be processed to a resource.
+5. CSRF Tag -> This is a Cross-Site Request Forgery token that secures the HTTP POST action initiated on the subsequent submission of the form.
+6. CSRF is mandatory for Django to work. It works by using a "hidden input" which is a random code and checking that it matches the user's local site page.
+7. ```{{ form.as_p }}``` means that the form tag is taken in the form of a paragraph tag for each. So there are appropriate break tags when necessary.
+8. ```form.cleaned_data``` returns a dictionary of validated form input fields and their values, where string primary keys are returned as objects.
+9. ```form.data``` returns a dictionary of un-validated form input fields and their values in string format (i.e. not objects).
+
+### Relative URLs with Templates and Template Filters
+
+1. Format: ```{% url 'basic_app:other' %}```
+2. This will take you to the homepage: ```{% url 'index' %}```
+3. This will take you to the database login page: ```{% url 'admin:index' %}```
+4. https://docs.djangoproject.com/en/1.11/ref/templates/builtins -> Documentation for filters
+
+
+### Django user authentication
+
+1. The apps to be used are: ```django.contrib.auth``` and ```django.contrib.contenttypes```. These should be present in INSTALLED_APPS array.
+2. For passwords we will use: the PBKDF2 algorithm with an SHA256 hash that is built-in in DJANGO.
+3. Install for bcrypt and argon2: ```pip install bcrypt``` and ```pip install django[argon2]```.
+4. Add this accordingly:
+   ```
+   PASSWORD_HASHERS = [
+    
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher', ]
+   ```
+
+### USER Models
+
+1. The user object has key features: Username, Email, Password, FirstName and Surname.
+2. Other attributes for user object: is_active, is_staff, is_superuser.
+3. To work with images in Python, we need to install pillow: ```pip install pillow```
+4. If jpeg error is coming: ``` pip install pillow --global-option="build_ext" --global-option="--disable-jpeg" ```
+5. User-uploaded content will go to the media folder, with the MEDIA_ROOT.
