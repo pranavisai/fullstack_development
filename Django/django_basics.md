@@ -39,7 +39,7 @@ Migrations allow us to move databases from one design to another. This is also r
 
 ### Building an application:
 
-Create an application using: ```python manage.py startapp appname```
+Create an application using: ```django-admin startapp appname```
 
 ### Explanation of the files created accordingly:
 
